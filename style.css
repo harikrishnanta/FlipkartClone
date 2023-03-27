@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    background-color: #f1f3f6;
+}
+
+.plus a {
+    text-decoration: none;
+}
+
+.plus a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary-colour: #2874f0;
+}
+
+.container {
+    padding: 0 8px;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary-colour);
+    height: 56px;
+}
+
+header .nav-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    position: relative;
+    top: 2px;
+}
+
+.logo img {
+
+    width: 80%;
+}
+
+.plus {
+
+    width: 80%;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    position: relative;
+    top: -2px;
+}
+
+.plus p {
+    margin: 0;
+    color: #f0f0f0;
+    font-size: 11px;
+    font-weight: 550;
+    font-style: italic;
+}
+
+
+.plus a {
+    display: flex;
+    color: #f0f0f0;
+}
+
+.plus img {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+}
+
+.plus-icon {
+
+    color: #ffe500;
+
+}
+
+header .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+header .search .search-container {
+    width: 540px;
+    height: 36px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(red, green, blue / 23%);
+    display: flex;
+}
+
+header .search .search-container input {
+    width: calc(100% - 32px);
+    padding: 16px;
+    outline: none;
+    border: none;
+}
+
+header .search .search-container .recent_search {
+    position: absolute;
+    background-color: white;
+    box-shadow: -5px -0px 5px rgba(0, 0, 0, 0.1), 5px 5px 5px rgba (0, 0, 0, 0.1);
+    height: 400px;
+    width: 540px;
+    top: 46px;
+    border-top: 1px solid #ccc;
+    display: none;
+}
+
+header .search .search-container:focus-within .recent_search {
+    display: block;
+}
+
+header .search .search-container:focus-within .recent_search .recent_list p {
+    display: flex;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+header .search .search-container button {
+    width: 36px;
+    height: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+header .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+header .login button {
+    width: 122px;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+header .login button a {
+    text-decoration: none;
+    color: var(--primary-colour);
+}
+
+header .login .login_menu {
+    position: absolute;
+    top: 60px;
+    height: 350px;
+    width: 100%;
+    width: 280px;
+    background-color: white;
+    margin-right: -40px;
+    transform: translateX(-30%);
+    display: none;
+    padding-top: 20px;
+
+
+}
+
+header .login .login_menu::before {
+    position: absolute;
+    content: "";
+    margin-left: 135px;
+    top: -14px;
+    border-top: 0px solid red;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+
+
+}
+
+header .login:hover .login_menu {
+    display: block;
+}
+
+header .login .login_menu .login_menu_list {
+    max-height: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px -0px 5px rgba(0, 0, 0, 0.1), 5px 5px 5px rgba (0, 0, 0, 0.1);
+    padding: 5px 20px;
+    font-size: 15px;
+
+}
+
+header .login .login_menu .login_menu_list .login_menu_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .login .login_menu .login_menu_list .login_menu_top a {
+    text-decoration: none;
+}
+
+header .login .login_menu .login_menu_list .login_menu_top:hover a {
+    text-decoration: underline;
+}
+
+header .become-seller {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more svg {
+    margin-left: 8px;
+    rotate: -90deg;
+    transition: transform 0.5s;
+}
+
+header .more svg:hover {
+    transform: rotate(-180deg);
+}
+
+
+header .cart {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+
+
+}
+
+header .cart svg {
+    margin-right: 8px;
+}
+
+/************feature products****************/
+
+.main {
+    width: 100%;
+    height: 122px;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+}
+
+.main_container {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_item {
+    height: 20px;
+    display: flex;
+    flex: content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main_item img {
+    width: 64px;
+    height: 64px;
+}
+
+.main_item_txt {
+
+    height: 100%;
+    display: flex;
+    flex: content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_item svg {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    rotate: -90deg;
+    transition: transform 0.3s;
+    padding: 5px 5px;
+}
+
+.main_item:hover svg {
+    transform: rotate(-180deg);
+}
+
+/*************ImageSlider************/
+.imageSliderContainer {
+    position: relative;
+    background-color: #f1f3f6;
+    height: 280px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imageSliderButton {
+    position: absolute;
+    z-index: 10;
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 75px;
+
+}
+
+.imageSliderButton button {
+    padding: 30px 12px;
+    background-color: white;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    border-radius: 5px;
+    z-index: 13;
+}
+.imageSliderButton button:nth-child(odd){
+    border-radius: 0px 3px 3px 0px;
+}
+
+.imageSliderButton button:nth-child(even){
+    border-radius: 3px 0px 0px 3px;
+}
+
+.imageSliderButton .rightbutton {
+    transform: rotate(-180deg);
+    
+}
+
+.imageSliderList {
+    position: absolute;
+    top: 12px;
+    position: absolute;
+    z-index: 8;
+    padding-left: 20px; 
+    width: 99%;
+    height: 95%;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.imageSliderItem {
+    min-width: 99%;
+    width: 100%;
+    max-width: 99%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s;
+
+}
+
+.imageSliderItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/**********************All the best electronics***********/
+
+.bestofElectronic_Contianer{
+    width: 99%;
+    height: 310px;
+    background-color: whitesmoke;
+    display: flex;
+    overflow: hidden;
+    
+}
+.bestofElectronicmoreOption{
+    height: 100px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    
+}
+.bestofElectronicmoreOption img{
+    height: 100%;
+    width: 100%;
+}
+.BestofElectronic_item{
+    background-color: white;
+    min-width: 210px;
+    max-width:210px ;
+    height: 310px;
+    position: relative;
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    
+}
+.viewAllBtn{
+    background-color: #2874f0;
+    padding: 6px 16px;
+    border-radius: 3px;
+    color:white;
+    font-size: 15px;
+}
+.bestofElectronic_bigText{
+    font-size: 30px;
+    text-align: center;
+    margin:60px 0px 30px 0px;
+}
+.bestofElectronic_list{
+    display: flex;
+}
+.bestOfElectornic_image_Product{
+    height: max-content;
+    text-align: center;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+   
+}
+.bestOfElectornic_image_Product img{
+    width: 90%;
+    max-height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bestofElectornicProduct_name{
+    font-size: 12px;
+    padding: 5px;
+    letter-spacing: 0.5px;
+}
+.bestofElecronic_discount{
+    color:#388e3c;
+}
+.bestofElectronic_brand{
+    color:rgb(143, 136, 136);
+}
+
+
+.bestofElctronic_product_item{
+    display: flex;
+    overflow: hidden;
+}
+.bestofElectronic_brand{
+    font-size: 12px;
+    padding-top: 7px;
+}
+.bestofElectornicProduct_name{
+    color:#000;
+}
