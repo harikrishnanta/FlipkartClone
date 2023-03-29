@@ -161,9 +161,6 @@ header .login button {
     padding: 5px 40px;
     font-size: 16px;
     font-weight: 600;
-}
-
-header .login button a {
     text-decoration: none;
     color: var(--primary-colour);
 }
@@ -300,6 +297,9 @@ header .cart svg {
     font-size: 14px;
     font-weight: 500;
 }
+.main_item:hover{
+    color: #2874f0;
+}
 
 .main_item img {
     width: 64px;
@@ -325,8 +325,12 @@ header .cart svg {
     padding: 5px 5px;
 }
 
-.main_item:hover svg {
-    transform: rotate(-180deg);
+.main_item:hover svg{
+    transform: rotate(-180deg); 
+}
+
+.main_item:hover svg path{
+    fill: #2874f0;
 }
 
 /*************ImageSlider************/
@@ -582,19 +586,204 @@ header .cart svg {
 .popupcontainer{
     display: block;
 }
+
 .popuplogin{
     pointer-events: auto;
-    opacity: 1;
+    opacity: 0;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
+    top: 0%;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,.6);
-    z-index: 12;
+    z-index: -12;
     outline: none;
-    transition: opacity .2s;     
+    transition: opacity .2s ease,
+                z-index 0s ease;    
+}
+.popuplogin.active{
+    opacity: 1;
+    z-index: 12;
+    transition: opacity .2s ease,  
+                z-index 0s ease;
+}
+
+.popuplogin1{
+    outline: none;
+    position: relative;
+    display: flex;
+}
+.buttonclass1{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: box-shadow .2s ease;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.login1{
+    width: 650px;
+    max-width: 90%;
+    height: 500px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.login2{
+    display: flex;
+}
+.sub1{
+    background-color: #2874f0;
+    color: #fff;
+    padding: 40px 33px;
+    font-size: 15px;
+    width: 175px;
+    height: 420px;
+}
+.login_font{
+    font-size: 28px;
+    font-weight: 500;
+}
+.para_style{
+    font-size: 18px;
+    margin-top: 16px;
+    line-height: 150%;
+    color: #dbdbdb;
+}
+.sub1 img{
+
+    padding-top: 175px;
+    margin:-24px;
+}
+.enter_mobile{
+    position: relative;
+    margin-bottom: 34px;
+    font-size: 16px;
+    top: 25px;
+    width:80%;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.input_mobile{
+    padding: 8px 10px 10px 0;
+    width: 100%;
+    color: #000;
+    font-size: inherit;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.enter_num{
+    color: #878787;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translateY(10px);
+    transform-origin: left;
+}
+.terms_policy{
+    color: #878787;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 55px;
+}
+.terms{
+    color: #2874f0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.Reqst_otp{
+    margin-top: 16px;
+}
+.otp_btn{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    width: 200px;
+    height: 48px;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: box-shadow .2s ease;
+    vertical-align: super;
+    cursor: pointer;
+    outline: none;
+    margin:60px
+}
+.create_ac{
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #212121;
+    pointer-events: auto;
+    margin-left: 235px;
+}
+.new_acc{
+    text-decoration: none;
+    color: #2874f0;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    line-height: 1.4;
+    font-size: 14px;
+}
+/**************logindrop**************/
+.loginul{
+    border-top: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #212121;
+}
+.loginli{
+    border-bottom: 1px solid #f0f0f0;
+    list-style: none;
+}
+.loginli a{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px!important;
+    text-decoration: none;
+}
+.loginli svg{
+    width:16;
+    height: 16;
+}
+.logincat{
+    text-transform: none;
+    margin-left: 12px;
+    cursor:pointer;
+    color: #000;
 }

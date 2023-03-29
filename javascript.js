@@ -58,3 +58,12 @@ function renderImageSlider(){
 
 setInterval(renderImageSlider,5000)
 
+/**********Popup**********/
+document.querySelector("#loginbtn").addEventListener("click",function(){
+    document.querySelector(".popuplogin").classList.add("active");
+});
+
+document.querySelector(".popuplogin .popuplogin1 .buttonclass1").addEventListener("click",function(){
+    document.querySelector(".popuplogin").classList.remove("active");
+});
+
